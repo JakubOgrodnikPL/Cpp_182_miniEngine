@@ -5,8 +5,29 @@
 
 using namespace std;
 
+#include "olc.h"
+
+class Example : public olc
+{
+public:
+    Example()
+    {}
+    virtual bool OnUserCreate()
+    {
+        return true;
+    }
+
+    virtual bool OnUserUpdate(float fElapsedTime)
+    {
+        return true;
+    }
+};
+
 int main()
 {
+    Exmple demo;
+    demo.ConstructConsole(160, 100, 8, 8);
+    demo.Start;
     return 0;
 }
 
